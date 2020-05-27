@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>巧克力販賣機</title>
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -25,12 +25,10 @@
       </div>
       <div class="exit"><img id="purchased" v-if="isCheckedOut" :src="selectedItem ? selectedItem.img : ''" :style="checkoutStyle" @click="pickUp" /></div>
     </div>
-    <div class="wallet">
       <div class="coins">
         <p>Your unlimited wallet (you're welcome)&nbsp;&#x2192;</p>
         <coin v-for="coin of coins" :coin="coin" :key="coin.class" @dragstart="dragstart" @dragend="dragend"></coin>
       </div>
-    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="main.js"></script>
